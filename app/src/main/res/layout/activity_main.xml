@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/realTabContent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/tab_rg_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/mmfooter_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_rb_weixin"
+            style="@style/tab_rb_style"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_weixin"
+            android:text="微信" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_tongxunlu"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/tab_selector_tongxunlu"
+            android:text="通讯录" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_faxian"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/tab_selector_faxian"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_wo"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/tab_selector_wo"
+            android:text="通讯录" />
+    </RadioGroup>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            ></FrameLayout>
+    </android.support.v4.app.FragmentTabHost>
+
+</LinearLayout>
